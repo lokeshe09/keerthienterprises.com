@@ -1,0 +1,7 @@
+{
+  "name": "Keerthi Enterprises",
+  "description": "India's trusted insurance broking company for Life, Health, and Motor Insurance since 2017.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

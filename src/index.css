@@ -1,0 +1,92 @@
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  background-image: url('./assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* App Container */
+.app-viewport {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  background-color: #f8fafc;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Styling */
+.scrolling-card {
+  background: white;
+  border-radius: 20px;
+  margin: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+  z-index: 1000;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  gap: 4px;
+  text-transform: uppercase;
+}
+
+.nav-link.active {
+  color: #a82e2e;
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
