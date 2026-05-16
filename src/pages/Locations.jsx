@@ -12,7 +12,7 @@ export default function Locations() {
   const locations = [
     {
       name: "Head Office - ECIL",
-      address: "H No: 42-553/2, Flat No: 104A, 3rd Floor, Green Hills Colony, Opp: Kapra Municipal Office, Moula-ali, Hyderabad – 500062",
+      address: "H No: 42-553/2, Flat No: 104A, 3rd Floor, Green Hills Colony, Opp: Kapra Municipal Office, Moula-ali, Hyderabad – 500062, Telangana State",
       mapUrl: "https://www.google.com/maps/place/17%C2%B028'13.0%22N+78%C2%B033'58.7%22E",
       embed: "https://maps.google.com/maps?hl=en&q=17.4702873,78.5663147&t=m&z=17&output=embed",
       type: "Primary Headquarters"

@@ -90,7 +90,7 @@ export default function Home() {
           <div>
             <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Address</h4>
             <p className="text-xs text-slate-700 leading-relaxed font-medium">
-              G 15 CROSS ROAD SHOPPING CENTRE, SAYAN ROAD AMROLI SURAT 394107
+              H No: 42-553/2, Flat No: 104A, 3rd Floor, Green Hills Colony, Opp: Kapra Municipal Office, Moula-ali, Hyderabad – 500062, Telangana State
             </p>
           </div>
         </div>
@@ -112,7 +112,6 @@ export default function Home() {
           <div>
             <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Contact</h4>
             <p className="text-xs text-slate-700 font-medium">+91 63098 32224</p>
-            <p className="text-xs text-slate-700 font-medium">+91 91579 24109</p>
           </div>
         </div>
       </section>
