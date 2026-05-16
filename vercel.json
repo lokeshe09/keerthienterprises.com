@@ -133,7 +133,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</services>; rel=preload, </contact>; rel=preload, </assets/company%20logo.png>; rel=preload; as=image"
+          "value": "</services>; rel=preload, </contact>; rel=preload, </assets/logo.png>; rel=preload; as=image"
         },
         {
           "key": "X-Robots-Tag",
