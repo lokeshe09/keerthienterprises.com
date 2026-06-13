@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail, Share2, ShieldCheck, Users, Calendar, Globe, ArrowRight } from "lucide-react";
+import { Phone, MapPin, Mail, Share2, ShieldCheck, Users, Calendar, Globe, ArrowRight, Handshake, HeartHandshake, Activity, Car } from "lucide-react";
 import useSEO from "../hooks/useSEO";
 import trustedPartners from "../assets/trusted_partners.png";
 import claimsProcess from "../assets/claims_process.png";
@@ -8,22 +8,23 @@ export default function Home() {
   useSEO({
     title: "India's Trusted Insurance Broker | Keerthi Enterprises",
     description:
-      "Keerthi Enterprises - India's #1 trusted insurance broking company since 2017. 100% Trust & Expert guidance for Life, Health & Motor Insurance. 10,000+ happy customers.",
+      "Keerthi Enterprises - India's #1 trusted insurance broking company with decades of experience. 100% Trust & Expert guidance for Life, Health & Motor Insurance. 10,000+ happy customers.",
     canonical: "/",
   });
 
   const stats = [
-    { label: "Established", value: "2017", icon: Calendar },
-    { label: "Team Members", value: "30+", icon: Users },
+    { label: "Of Experiences", value: "Decades", icon: Calendar },
+    { label: "Experience Experts", value: "10+ Years", icon: Users },
     { label: "Coverage", value: "Pan India", icon: Globe },
-    { label: "Happy Clients", value: "10,000+", icon: Users },
-    { label: "Trust Factor", value: "100%", icon: ShieldCheck },
+    { label: "Happy Customers", value: "Ten Thousands of", icon: Users },
+    { label: "Claim Assistance", value: "End-To-End", icon: ShieldCheck },
+    { label: "Trusted Partners", value: "Top Insurers", icon: Handshake },
   ];
 
   const services = [
-    { title: "Life Insurance", icon: "🛡️", desc: "Term, Whole Life & ULIPs", link: "/services#life-insurance" },
-    { title: "Health Insurance", icon: "🏥", desc: "Family Floater & Cashless", link: "/services#health-insurance" },
-    { title: "Motor Insurance", icon: "🚗", desc: "Car & Bike, 24/7 Support", link: "/services#motor-insurance" },
+    { title: "Life Insurance", icon: HeartHandshake, color: "text-indigo-600 bg-indigo-50 border border-indigo-100", desc: "Term, Whole Life & ULIPs", link: "/services#life-insurance" },
+    { title: "Health Insurance", icon: Activity, color: "text-emerald-600 bg-emerald-50 border border-emerald-100", desc: "Family Floater & Cashless", link: "/services#health-insurance" },
+    { title: "Motor Insurance", icon: Car, color: "text-red-500 bg-red-50 border border-red-100", desc: "Car & Bike, 24/7 Support", link: "/services#motor-insurance" },
   ];
 
   const scrollToId = (id) => {
@@ -43,10 +44,10 @@ export default function Home() {
 
 
         <div className="relative z-10 h-full flex flex-col items-center justify-end pb-8 px-6 text-center">
-          <div className="w-24 h-24 bg-white p-2 rounded-2xl shadow-xl mb-6 relative">
+          <div className="w-32 h-32 bg-white p-3 rounded-2xl shadow-xl mb-6 relative">
             <img src={logo} alt="Keerthi Enterprises" className="w-full h-full object-contain" />
-            <div className="absolute -bottom-2 -right-2 bg-blue-500 text-white p-1 rounded-full border-2 border-white">
-              <ShieldCheck size={16} />
+            <div className="absolute -bottom-1 -right-1 bg-blue-500 text-white p-1 rounded-full border-2 border-white">
+              <ShieldCheck size={18} />
             </div>
           </div>
 
@@ -62,7 +63,12 @@ export default function Home() {
               <Phone size={18} />
               <span className="text-[10px] font-bold uppercase">Call</span>
             </a>
-            <a href="https://maps.google.com/?q=Keerthi+Enterprises+Hyderabad" className="flex flex-col items-center gap-1.5 p-2 bg-red-600 rounded-xl text-white transition-transform active:scale-95">
+            <a 
+              href="https://www.google.com/maps/place/17%C2%B028'13.0%22N+78%C2%B033'58.7%22E" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex flex-col items-center gap-1.5 p-2 bg-red-600 rounded-xl text-white transition-transform active:scale-95"
+            >
               <MapPin size={18} />
               <span className="text-[10px] font-bold uppercase">Direction</span>
             </a>
@@ -81,63 +87,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT DETAILS LIST */}
-      <section className="px-4 py-6 space-y-4">
-        <div className="flex gap-4 p-4 bg-white rounded-2xl shadow-soft">
-          <div className="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-600 shrink-0">
-            <MapPin size={20} />
-          </div>
-          <div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Address</h4>
-            <p className="text-xs text-slate-700 leading-relaxed font-medium">
-              H No: 42-553/2, Flat No: 104A, 3rd Floor, Green Hills Colony, Opp: Kapra Municipal Office, Moula-ali, Hyderabad – 500062, Telangana State
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4 p-4 bg-white rounded-2xl shadow-soft">
-          <div className="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-600 shrink-0">
-            <Mail size={20} />
-          </div>
-          <div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Email</h4>
-            <p className="text-xs text-slate-700 font-medium">keerthienterpriseshyd1972@gmail.com</p>
-          </div>
-        </div>
-
-        <div className="flex gap-4 p-4 bg-white rounded-2xl shadow-soft">
-          <div className="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-600 shrink-0">
-            <Phone size={20} />
-          </div>
-          <div>
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Contact</h4>
-            <p className="text-xs text-slate-700 font-medium">+91 63098 32224</p>
-          </div>
-        </div>
-      </section>
-
-      {/* WHATSAPP ACTION */}
-      <section className="px-4 mb-6">
-        <a 
-          href="https://wa.me/916309832224"
-          className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white p-4 rounded-2xl font-bold transition-transform active:scale-95 shadow-lg shadow-green-500/20"
-        >
-          <Share2 size={24} />
-          Share on WhatsApp
-        </a>
-      </section>
-
       {/* QUICK STATS - GRID STYLE */}
       <section className="grid grid-cols-2 gap-4 px-4 mb-6">
         {stats.map((stat, i) => {
           const Icon = stat.icon;
           return (
-            <div key={i} className="bg-white p-4 rounded-2xl shadow-soft flex flex-col items-center text-center">
-              <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-2">
+            <div key={i} className="bg-sky-50/80 border border-sky-100 p-4 rounded-2xl shadow-soft flex flex-col items-center text-center transition-all hover:scale-[1.02]">
+              <div className="w-10 h-10 bg-white shadow-sm rounded-full flex items-center justify-center text-sky-600 mb-2">
                 <Icon size={20} />
               </div>
-              <span className="text-lg font-black text-slate-800">{stat.value}</span>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{stat.label}</span>
+              <span className="text-lg font-black text-sky-950">{stat.value}</span>
+              <span className="text-[10px] font-bold text-sky-700/80 uppercase tracking-wider">{stat.label}</span>
             </div>
           );
         })}
@@ -152,18 +112,23 @@ export default function Home() {
           </button>
         </div>
         <div className="space-y-4">
-          {services.map((service, i) => (
-            <article key={i} className="bg-white p-5 rounded-3xl shadow-soft flex items-center gap-5 border border-slate-100">
-              <div className="text-4xl shrink-0">{service.icon}</div>
-              <div className="flex-grow">
-                <h3 className="text-sm font-bold text-slate-800 mb-1">{service.title}</h3>
-                <p className="text-[11px] text-slate-500 font-medium">{service.desc}</p>
-              </div>
-              <button onClick={() => scrollToId(service.link.split('#')[1])} className="w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center text-slate-400">
-                <ArrowRight size={16} />
-              </button>
-            </article>
-          ))}
+          {services.map((service, i) => {
+            const Icon = service.icon;
+            return (
+              <article key={i} className="bg-white p-5 rounded-3xl shadow-soft flex items-center gap-5 border border-slate-100">
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${service.color}`}>
+                  <Icon size={22} className="stroke-[2.5]" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-sm font-bold text-slate-800 mb-1">{service.title}</h3>
+                  <p className="text-[11px] text-slate-500 font-medium">{service.desc}</p>
+                </div>
+                <button onClick={() => scrollToId(service.link.split('#')[1])} className="w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center text-slate-400">
+                  <ArrowRight size={16} />
+                </button>
+              </article>
+            );
+          })}
         </div>
       </section>
 

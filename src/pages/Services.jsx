@@ -5,7 +5,6 @@ import useSEO from "../hooks/useSEO";
 import MotorInsuranceVisual from "../components/MotorInsuranceVisual";
 import HealthInsuranceVisual from "../components/HealthInsuranceVisual";
 import LifeInsuranceVisual from "../components/LifeInsuranceVisual";
-import claimsProcess from "../assets/claims_process.png";
 import logo from "../assets/logo.png";
 import lifePromo from "../assets/life_insurance_promo.png";
 import healthPromo from "../assets/health_insurance_promo.png";
@@ -201,17 +200,6 @@ export default function Services() {
           );
         })}
       </div>
-
-      <section className="px-4 pb-8">
-        <h3 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-4 px-2">Our Service Standard</h3>
-        <div className="bg-white p-2 rounded-[2.5rem] shadow-soft border border-slate-100 overflow-hidden">
-          <img 
-            src={claimsProcess} 
-            alt="Insurance Service Process" 
-            className="w-full h-auto object-contain rounded-[2rem]"
-          />
-        </div>
-      </section>
 
       <section className="px-4 pb-12">
         <div className="bg-red-600 rounded-[2.5rem] p-8 text-center text-white">

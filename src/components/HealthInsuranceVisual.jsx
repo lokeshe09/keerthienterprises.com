@@ -1,12 +1,12 @@
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, Users, User, Activity, CreditCard } from "lucide-react";
 import healthInsurancePromo from "../assets/health_insurance_promo.png";
 
 export default function HealthInsuranceVisual() {
   const healthBenefits = [
-    { title: "Family Floater", icon: "👨‍👩‍👧‍👦" },
-    { title: "Individual Cover", icon: "👤" },
-    { title: "Critical Illness", icon: "🏥" },
-    { title: "Cashless Hosp.", icon: "💳" }
+    { title: "Family Floater", icon: Users, color: "text-blue-600 bg-blue-50 border border-blue-100" },
+    { title: "Individual Cover", icon: User, color: "text-emerald-600 bg-emerald-50 border border-emerald-100" },
+    { title: "Critical Illness", icon: Activity, color: "text-red-600 bg-red-50 border border-red-100" },
+    { title: "Cashless Hosp.", icon: CreditCard, color: "text-indigo-600 bg-indigo-50 border border-indigo-100" }
   ];
 
   return (
@@ -25,12 +25,17 @@ export default function HealthInsuranceVisual() {
 
       {/* QUICK STATS / HIGHLIGHTS */}
       <div className="grid grid-cols-2 gap-4 p-6 bg-slate-50">
-        {healthBenefits.map((benefit, i) => (
-          <div key={i} className="bg-white p-4 rounded-2xl border border-slate-100 flex flex-col items-center text-center shadow-sm">
-            <span className="text-2xl mb-2">{benefit.icon}</span>
-            <p className="text-[9px] font-black text-slate-800 uppercase tracking-tight leading-tight">{benefit.title}</p>
-          </div>
-        ))}
+        {healthBenefits.map((benefit, i) => {
+          const BenefitIcon = benefit.icon;
+          return (
+            <div key={i} className="bg-white p-4 rounded-2xl border border-slate-100 flex flex-col items-center text-center shadow-sm">
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-2 shrink-0 ${benefit.color}`}>
+                <BenefitIcon size={18} className="stroke-[2.5]" />
+              </div>
+              <p className="text-[9px] font-black text-slate-800 uppercase tracking-tight leading-tight">{benefit.title}</p>
+            </div>
+          );
+        })}
       </div>
 
       {/* CALL TO ACTION */}

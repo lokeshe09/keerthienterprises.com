@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 export default function About() {
   useSEO({
     title: "About Us | Why Choose Keerthi Enterprises India",
-    description: "Know why Keerthi Enterprises is India's most trusted insurance broking company since 2017. 30+ expert advisors, 10,000+ happy clients with 100% trust.",
+    description: "Know why Keerthi Enterprises is India's most trusted insurance broking company with decades of experience. Advisors with 10+ years of experience, 10,000+ happy clients with 100% trust.",
     canonical: "/about",
   });
 
@@ -14,7 +14,7 @@ export default function About() {
     { title: "Personalized Service", desc: "Understanding your unique family & business needs.", icon: Shield },
     { title: "Fast Claim Support", desc: "Dedicated assistance throughout the claim settlement.", icon: Sparkles },
     { title: "Strong Partnerships", desc: "Collaborating with LIC, Star Health, ICICI & TATA AIG.", icon: Handshake },
-    { title: "Expert Guidance", desc: "30+ professional advisors navigating complex terms.", icon: Award }
+    { title: "Expert Guidance", desc: "Professional advisors with 10+ years of experience navigating complex terms.", icon: Award }
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function About() {
           <img src={logo} alt="Keerthi Enterprises" className="w-full h-full object-contain" />
         </div>
         <h1 className="text-xl font-black uppercase tracking-[0.2em] mb-2">Our Story</h1>
-        <p className="text-white/70 text-xs font-medium italic">India's 100% Trusted Partner Since 2017</p>
+        <p className="text-white/70 text-xs font-medium italic">India's 100% Trusted Partner with Decades of Experience</p>
       </div>
 
       <div className="px-4 py-8 space-y-6">
@@ -35,7 +35,7 @@ export default function About() {
           </div>
           <h2 className="text-xl font-black text-slate-800 uppercase tracking-tight mb-4 italic">Commitment to Excellence</h2>
           <p className="text-sm text-slate-500 font-medium leading-loose">
-            Since 2017, Keerthi Enterprises has been India's trusted insurance broking partner, helping thousands of families and businesses across the nation protect what matters most. We believe in transparency and personalized care.
+            With decades of experience, Keerthi Enterprises has been India's trusted insurance broking partner, helping thousands of families and businesses across the nation protect what matters most. We believe in transparency and personalized care.
           </p>
         </section>
 
@@ -85,8 +85,8 @@ export default function About() {
                 </div>
                 <div className="w-full h-px bg-slate-100"></div>
                 <div className="flex flex-col items-center">
-                    <span className="text-4xl font-black text-slate-900 tracking-tighter">30+</span>
-                    <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest mt-1">Expert Advisors</span>
+                    <span className="text-3xl font-black text-slate-900 tracking-tighter">10+ Years</span>
+                    <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest mt-1">Experience Experts</span>
                 </div>
             </div>
         </section>
