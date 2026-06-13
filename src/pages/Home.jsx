@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MapPin, Mail, Share2, ShieldCheck, Users, Calendar, Globe, ArrowRight, Handshake, HeartHandshake, Activity, Car, ChevronDown, HelpCircle } from "lucide-react";
+import { Phone, MapPin, Mail, Share2, ShieldCheck, Users, Calendar, Globe, ArrowRight, Handshake, HeartHandshake, Activity, Car, ChevronDown, HelpCircle, Building2 } from "lucide-react";
 import useSEO from "../hooks/useSEO";
 import trustedPartners from "../assets/trusted_partners.png";
 import claimsProcess from "../assets/claims_process.png";
@@ -9,7 +9,7 @@ export default function Home() {
   useSEO({
     title: "India's Trusted Insurance Broker | Keerthi Enterprises",
     description:
-      "Keerthi Enterprises - India's #1 trusted insurance broking company with decades of experience. 100% Trust & Expert guidance for Life, Health & Motor Insurance. 10,000+ happy customers.",
+      "Keerthi Enterprises - India's #1 trusted insurance broking company with decades of experience. 100% Trust & Expert guidance for Life, Health, Motor & Non-Motor Insurance. 10,000+ happy customers.",
     canonical: "/",
   });
 
@@ -26,6 +26,7 @@ export default function Home() {
     { title: "Life Insurance", icon: HeartHandshake, color: "text-indigo-600 bg-indigo-50 border border-indigo-100", desc: "Term, Whole Life & ULIPs", link: "/services#life-insurance" },
     { title: "Health Insurance", icon: Activity, color: "text-emerald-600 bg-emerald-50 border border-emerald-100", desc: "Family Floater & Cashless", link: "/services#health-insurance" },
     { title: "Motor Insurance", icon: Car, color: "text-red-500 bg-red-50 border border-red-100", desc: "Car & Bike, 24/7 Support", link: "/services#motor-insurance" },
+    { title: "Non-Motor Insurance", icon: Building2, color: "text-amber-600 bg-amber-50 border border-amber-100", desc: "Property, Fire & Cargo", link: "/services#non-motor-insurance" },
   ];
 
   const scrollToId = (id) => {
@@ -37,7 +38,11 @@ export default function Home() {
   const faqs = [
     {
       q: "What types of insurance products do you offer?",
-      a: "We offer tailored Life Insurance (Term & Whole Life), Health Insurance (Individual & Family Floater plans), and Motor Insurance (Car, Bike, and Commercial vehicles) from top national insurers."
+      a: "We offer tailored Life Insurance (Term & Whole Life), Health Insurance (Individual & Family Floater plans), Motor Insurance (Car, Bike, and Commercial vehicles), and Non-Motor Insurance (Property, Fire, Marine, Liability, and Shopkeeper cover) from top national insurers."
+    },
+    {
+      q: "What does Non-Motor insurance cover?",
+      a: "Non-Motor insurance protects commercial assets and businesses. It covers Fire & Allied Perils, Marine & Cargo transit, Public/Product Liability, Workmen's Compensation, Shopkeeper's Multi-peril packages, and Office/Factory properties."
     },
     {
       q: "How does your claim assistance work?",

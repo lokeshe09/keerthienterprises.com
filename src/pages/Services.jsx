@@ -1,10 +1,11 @@
-import { CheckCircle2, ShieldIcon, Activity, Car, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle2, ShieldIcon, Activity, Car, ArrowRight, ChevronLeft, ChevronRight, Building2 } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react"; // eslint-disable-line no-unused-vars
 import useSEO from "../hooks/useSEO";
 import MotorInsuranceVisual from "../components/MotorInsuranceVisual";
 import HealthInsuranceVisual from "../components/HealthInsuranceVisual";
 import LifeInsuranceVisual from "../components/LifeInsuranceVisual";
+import NonMotorInsuranceVisual from "../components/NonMotorInsuranceVisual";
 import logo from "../assets/logo.png";
 import lifePromo from "../assets/life_insurance_promo.png";
 import healthPromo from "../assets/health_insurance_promo.png";
@@ -74,8 +75,8 @@ function ServiceCarousel({ images, title, icon }) {
 
 export default function Services() {
   useSEO({
-    title: "Insurance Services | Life, Health & Motor Insurance India",
-    description: "Life Insurance, Health Insurance & Motor Insurance tailored for you. Best rates from LIC, Star Health, ICICI, TATA AIG.",
+    title: "Insurance Services | Life, Health, Motor & Non-Motor Insurance India",
+    description: "Life Insurance, Health Insurance, Motor Insurance & Non-Motor (Commercial, Property, Fire, Marine) tailored for you. Best rates from top insurers.",
     canonical: "/services",
   });
 
@@ -118,6 +119,17 @@ export default function Services() {
       points: ["Comprehensive Car Cover", "Two Wheeler Insurance", "Zero Depreciation", "24/7 Roadside Aid"],
       insurers: ["Royal Sundaram", "ICICI Lombard", "Bajaj Allianz"],
       icon: <Car className="text-white" />
+    },
+    {
+      id: "non-motor-insurance",
+      title: "Non-Motor Insurance",
+      images: [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop"
+      ],
+      desc: "Comprehensive general protection for commercial assets, fire, cargo transit, liability burdens, and physical storefront policies.",
+      points: ["Property & Allied Fire Cover", "Marine and Transit Security", "Commercial Liability Shields", "Shopkeeper Multi-Peril Solutions"],
+      insurers: ["TATA AIG", "ICICI Lombard", "Bajaj Allianz"],
+      icon: <Building2 className="text-white" />
     }
   ];
 
@@ -155,6 +167,14 @@ export default function Services() {
             return (
               <div key={service.id} id={service.id} className="pt-4">
                 <HealthInsuranceVisual />
+              </div>
+            );
+          }
+
+          if (service.id === "non-motor-insurance") {
+            return (
+              <div key={service.id} id={service.id} className="pt-4">
+                <NonMotorInsuranceVisual />
               </div>
             );
           }
