@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home, Briefcase, MapPin, MessageSquare, PhoneCall } from "lucide-react";
+import { Home, Briefcase, MapPin, MessageSquare, PhoneCall, HelpCircle } from "lucide-react";
 
 export default function BottomNav() {
   const [activeTab, setActiveTab] = useState("home");
@@ -9,6 +9,7 @@ export default function BottomNav() {
     { name: "Services", id: "services", icon: Briefcase },
     { name: "Locations", id: "locations", icon: MapPin },
     { name: "Reviews", id: "testimonials", icon: MessageSquare },
+    { name: "FAQ", id: "faq", icon: HelpCircle },
     { name: "Contact", id: "contact", icon: PhoneCall },
   ];
 
