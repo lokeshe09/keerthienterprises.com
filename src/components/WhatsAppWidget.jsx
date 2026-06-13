@@ -13,6 +13,24 @@ export default function WhatsAppWidget() {
 
   return (
     <>
+      {/* Floating Pop Message Bubble "How can I help you?" */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-[104px] right-6 z-50 hover:scale-105 active:scale-95 transition-transform duration-300 text-left animate-bounce-slow"
+        >
+          <div className="bg-[#25D366] text-white text-[11px] font-black uppercase tracking-wider px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 border border-[#20BA5C] relative">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            How can I help you?
+            {/* Elegant speech bubble pointer pointing down to WhatsApp button */}
+            <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-[#25D366] border-r border-b border-[#20BA5C] rotate-45" />
+          </div>
+        </button>
+      )}
+
       {/* Floating WhatsApp Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -75,25 +93,36 @@ export default function WhatsAppWidget() {
               Start WhatsApp
             </button>
           </div>
-
-          {/* Animation CSS */}
-          <style>{`
-            @keyframes slideUp {
-              from {
-                opacity: 0;
-                transform: translateY(30px) scale(0.95);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-              }
-            }
-            .animate-slideUp {
-              animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-          `}</style>
         </div>
       )}
+
+      {/* Animation CSS - Defined globally for this widget */}
+      <style>{`
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        .animate-slideUp {
+          animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes bounceSlow {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-6px);
+          }
+        }
+        .animate-bounce-slow {
+          animation: bounceSlow 2.5s ease-in-out infinite;
+        }
+      `}</style>
     </>
   );
 }

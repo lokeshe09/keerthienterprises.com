@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Locations from "./pages/Locations";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
+import Faq from "./pages/Faq";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Locations />
             <Testimonials />
             <Contact />
+            <Faq />
           </main>
           <BottomNav />
           <WhatsAppWidget />

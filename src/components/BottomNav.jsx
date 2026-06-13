@@ -9,8 +9,8 @@ export default function BottomNav() {
     { name: "Services", id: "services", icon: Briefcase },
     { name: "Locations", id: "locations", icon: MapPin },
     { name: "Reviews", id: "testimonials", icon: MessageSquare },
-    { name: "FAQ", id: "faq", icon: HelpCircle },
     { name: "Contact", id: "contact", icon: PhoneCall },
+    { name: "FAQ", id: "faq", icon: HelpCircle },
   ];
 
   const scrollToSection = (id) => {
