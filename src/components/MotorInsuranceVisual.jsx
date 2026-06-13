@@ -3,15 +3,6 @@ import motorInsurancePromo from "../assets/motor_insurance_promo.png";
 import motorInsurancePromoTelugu from "../assets/motor_insurance_promo_telugu.png";
 
 export default function MotorInsuranceVisual() {
-  const partners = [
-    { name: "TATA AIG", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Tata_AIG_Logo.svg/512px-Tata_AIG_Logo.svg.png" },
-    { name: "Royal Sundaram", logo: "https://www.royalsundaram.in/o/rsgj-theme/images/logo.png" },
-    { name: "Go Digit", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Digit_Insurance_Logo.svg/512px-Digit_Insurance_Logo.svg.png" },
-    { name: "HDFC ERGO", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/HDFC_ERGO_General_Insurance_Logo.svg/512px-HDFC_ERGO_General_Insurance_Logo.svg.png" },
-    { name: "Bajaj Allianz", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Bajaj_Allianz_General_Insurance_Logo.svg/512px-Bajaj_Allianz_General_Insurance_Logo.svg.png" },
-    { name: "ICICI Lombard", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/ICICI_Lombard_Logo.svg/512px-ICICI_Lombard_Logo.svg.png" }
-  ];
-
   return (
     <div className="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl max-w-sm mx-auto flex flex-col">
       {/* PROMOTIONAL BANNERS */}
@@ -35,23 +26,8 @@ export default function MotorInsuranceVisual() {
         </div>
       </div>
 
-      {/* PARTNERS LOGO GRID */}
-      <div className="grid grid-cols-3 gap-2 p-4 bg-white">
-        {partners.map((p, i) => (
-          <div key={i} className="aspect-video bg-white border border-slate-100 rounded-xl flex items-center justify-center p-2 hover:border-red-100 transition-colors">
-            <img 
-              src={p.logo} 
-              alt={p.name} 
-              className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100" 
-              onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
-            />
-            <span className="hidden text-[8px] font-black text-slate-300">{p.name}</span>
-          </div>
-        ))}
-      </div>
-
       {/* LABEL AND BUTTON */}
-      <div className="px-6 pb-6 pt-2 bg-white">
+      <div className="px-6 pb-6 pt-4 bg-white">
         <h3 className="text-center text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 italic">Motor Insurance</h3>
         <a 
           href="https://wa.me/916309832224?text=Hi, I am interested in Motor Insurance Quote."
