@@ -52,7 +52,7 @@ export default function Locations() {
                 </div>
                 <div className="flex gap-3">
                   <Clock className="text-red-600 shrink-0" size={18} />
-                  <p className="text-xs text-slate-600 font-medium">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                  <p className="text-xs text-slate-600 font-medium">Mon - Sat: 10:00 AM - 6:30 PM</p>
                 </div>
               </div>
 

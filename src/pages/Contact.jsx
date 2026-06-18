@@ -20,10 +20,19 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const toEmail = "keerthienterpriseshyd1972@gmail.com";
-    const subject = `Insurance Quote Request - ${formData.service || "General Enquiry"} | ${formData.name}`;
-    const body = `Customer: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\n\n${formData.message}`;
-    window.location.href = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const phoneNumber = "916309832224";
+    const insuranceType = formData.service ? `${formData.service} INSURANCE` : "GENERAL INSURANCE";
+    const whatsappMessage = `Hi Keerthi Enterprises,
+
+I would like to submit an insurance enquiry with the following details:
+
+- *Name:* ${formData.name}
+- *Phone:* ${formData.phone}
+- *Insurance:* ${insuranceType}
+- *Message:* ${formData.message || "No specific message provided"}`;
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   const handleChange = (e) => {
@@ -148,7 +157,7 @@ export default function Contact() {
       <section className="px-4 pb-12">
         <div className="bg-slate-100 rounded-[2.5rem] p-8 text-center">
           <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 italic">Official Support</p>
-          <p className="text-xs text-slate-600 font-bold">MON - SAT | 09:00 AM - 06:00 PM</p>
+          <p className="text-xs text-slate-600 font-bold">MON - SAT | 10:00 AM - 06:30 PM</p>
         </div>
       </section>
     </div>
